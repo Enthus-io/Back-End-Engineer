@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\3. JavaScript Syntax, Part I\\Learn JavaScript Syntax Functions\\Rock, Paper, or Scissors Project\\app.js"
+            "program": "${workspaceFolder}\\3. JavaScript Syntax, Part I\\Learn JavaScript Syntax Functions\\Sleep Debt Calculator Project\\app.js"
         }
     ]
 }
