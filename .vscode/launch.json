@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\3. JavaScript Syntax, Part I\\Learn JavaScript Syntax Scope\\Training Days Project\\main.js"
+            "program": "${workspaceFolder}\\3. JavaScript Syntax, Part I\\Code Challenges JavaScript Fundamentals\\canIVote Challenge\\main.js"
         }
     ]
 }
