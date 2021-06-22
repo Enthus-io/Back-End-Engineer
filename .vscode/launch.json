@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\4. JavaScript Syntax, Part II\\Learn JavaScript Syntax Loops\\Loops\\main.js"
+            "program": "${workspaceFolder}\\4. JavaScript Syntax, Part II\\Learn JavaScript Syntax Loops\\Whale Talk Project\\main.js"
         }
     ]
 }
