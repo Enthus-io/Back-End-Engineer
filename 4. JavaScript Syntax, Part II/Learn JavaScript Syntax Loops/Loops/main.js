@@ -49,3 +49,14 @@ do {
 
 } while (i < rapperArray.length);
 
+
+// While powerful, the for loop can be a bit cumbersome to set up, prone to errors, and could lead to difficult-to-read code.
+// The ES6 version of JavaScript introduced the shorter and more concise for...of loop. 
+const recipe = ['cilantro', 'olive oil', 'soy sauce', 'orange', 'lime', 'garlic', 'jalapeno', 'salt', 'black pepper', 'steak']
+
+for (const ingredient of recipe) {
+    if (ingredient === 'soy sauce') {
+        continue; // The continue statement is used to skip one iteration of the loop.
+    }
+    console.log(ingredient);
+}
