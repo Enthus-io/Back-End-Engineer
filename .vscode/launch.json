@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\4. JavaScript Syntax, Part II\\Learn JavaScript Syntax Objects\\Objects\\main.js"
+            "program": "${workspaceFolder}\\4. JavaScript Syntax, Part II\\Learn JavaScript Syntax Objects\\Advanced Objects\\main.js"
         }
     ]
 }
