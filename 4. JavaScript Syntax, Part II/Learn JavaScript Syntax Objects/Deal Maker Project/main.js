@@ -31,24 +31,8 @@ let menu = {
     },
     addDishToCourse: function (courseName, dishName, dishPrice) {
 
-        if (courseName === 'appetizer') {
-            this._courses._appetizers.push({
-                dish: {
-                    name: dishName,
-                    price: dishPrice
-                }
-            })
-        }
-        else if (courseName === 'main') {
-            this._courses._mains.push({
-                dish: {
-                    name: dishName,
-                    price: dishPrice
-                }
-            })
-        }
-        else if (courseName === 'dessert') {
-            this._courses._desserts.push({
+        if (courseName === 'appetizer' || courseName === 'main' || courseName === 'dessert') {
+            this._courses[`_${courseName}s`].push({
                 dish: {
                     name: dishName,
                     price: dishPrice
@@ -60,26 +44,35 @@ let menu = {
         }
     },
     getRandomDishFromCourse: function (courseName) {
-        return this._courses[`_${courseName}`][Math.floor(Math.random() * this._courses[`_${courseName}`].length)];
+
+        if (courseName === 'appetizer' || courseName === 'main' || courseName === 'dessert') {
+            return this._courses[`_${courseName}s`][Math.floor(Math.random() * this._courses[`_${courseName}s`].length)];
+        }
+        else {
+            console.log('Invalid emtry.')
+        }
     }
 }
 
-
-//console.log(menu);menu.addDishToCourse('appetizer', 'eman', 10);
-
 menu.addDishToCourse('appetizer', 'cheese dip', 1.99);
 menu.addDishToCourse('appetizer', 'chips', 2.99);
-
 
 menu.addDishToCourse('main', 'tacos', 8.99);
 menu.addDishToCourse('main', 'sopes', 9.99);
 menu.addDishToCourse('main', 'enchiladas', 10.99);
 
-
 menu.addDishToCourse('dessert', 'flan', 3.99);
 menu.addDishToCourse('dessert', 'fruta', 4.99);
 
+let generateRandomMeal = function () {
+    let appetizer = menu.getRandomDishFromCourse('appetizer');
+    let main = menu.getRandomDishFromCourse('main');
+    let dessert = menu.getRandomDishFromCourse('dessert');
+    let totalPrice = appetizer.dish.price + main.dish.price + dessert.dish.price;
 
-console.log(menu.getCourses);
+    console.log(`Your meal consist of ${appetizer.dish.name}, ${main.dish.name}, and ${dessert.dish.name} which come to a tatal of ${totalPrice}.`)
 
-console.log(menu.getRandomDishFromCourse('mains'));
+}
+
+generateRandomMeal();
+menu.getRandomDishFromCourse('desert');
