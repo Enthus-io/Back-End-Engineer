@@ -4,7 +4,6 @@ let menu = {
         _mains: [],
         _desserts: [],
         set setAppetizers(appetizers) {
-
             this._appetizers = appetizers;
         },
         set setMains(mains) {
@@ -24,7 +23,11 @@ let menu = {
         }
     },
     get getCourses() {
-        return Object.entries(this._courses);
+        return {
+            appetizers: this._courses._appetizers,
+            mains: this._courses._mains,
+            desserts: this._courses._desserts
+        }
     },
     addDishToCourse: function (courseName, dishName, dishPrice) {
 
@@ -43,7 +46,8 @@ let menu = {
                     price: dishPrice
                 }
             })
-        } else if (courseName === 'dessert') {
+        }
+        else if (courseName === 'dessert') {
             this._courses._desserts.push({
                 dish: {
                     name: dishName,
@@ -51,40 +55,31 @@ let menu = {
                 }
             })
         }
+        else {
+            console.log('Invalid emtry.')
+        }
+    },
+    getRandomDishFromCourse: function (courseName) {
+        return this._courses[`_${courseName}`][Math.floor(Math.random() * this._courses[`_${courseName}`].length)];
     }
 }
 
 
 //console.log(menu);menu.addDishToCourse('appetizer', 'eman', 10);
 
-menu.addDishToCourse('appetizer', 'reziteppa', 1);
-
-menu.addDishToCourse('main', 'niam', 2);
-
-
-menu.addDishToCourse('dessert', 'tressed', 3);
+menu.addDishToCourse('appetizer', 'cheese dip', 1.99);
+menu.addDishToCourse('appetizer', 'chips', 2.99);
 
 
-
-menu.addDishToCourse('dessert', 'tressed', 33);
-
-
-let keyValues = menu.getCourses;
-console.log(keyValues);
+menu.addDishToCourse('main', 'tacos', 8.99);
+menu.addDishToCourse('main', 'sopes', 9.99);
+menu.addDishToCourse('main', 'enchiladas', 10.99);
 
 
+menu.addDishToCourse('dessert', 'flan', 3.99);
+menu.addDishToCourse('dessert', 'fruta', 4.99);
 
 
-console.log(menu._courses._appetizers);
+console.log(menu.getCourses);
 
-console.log(menu._courses._mains);
-
-console.log(menu._courses._desserts);
-
-
-  //6, 9, 10, 11, 12, 13
-
-
-
-
-
+console.log(menu.getRandomDishFromCourse('mains'));
