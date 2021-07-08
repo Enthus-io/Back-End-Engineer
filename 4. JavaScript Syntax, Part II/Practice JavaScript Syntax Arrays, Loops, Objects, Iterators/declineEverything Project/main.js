@@ -19,9 +19,9 @@ declineEverything(veggies);
 // Now we need to get healthy! Write a function acceptEverything() that takes in an array of strings and loops through each element in the array
 // and grudgingly accepts each of them, by logging to the console in the following format: 'Ok, I guess I will eat some [element].'
 
-const acceptEverything = function(veggies){
+const acceptEverything = function (veggies) {
     veggies.forEach(veg => {
-        console.log('Ok, I guess I will eat some ' + veg + '.');        
+        console.log('Ok, I guess I will eat some ' + veg + '.');
     });
 }
 
