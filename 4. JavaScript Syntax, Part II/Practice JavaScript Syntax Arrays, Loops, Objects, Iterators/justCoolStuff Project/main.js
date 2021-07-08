@@ -8,12 +8,12 @@ function justCoolStuff(myStuff, coolStuff) {
     return myStuff.filter(function (mStuff) {
         let found = false;
 
-        coolStuff.forEach(cStuff => {
+        for (const cStuff of coolStuff) {
             if (cStuff === mStuff) {
                 found = true;
                 break;
             }
-        });
+        }
 
         return found;
     });
