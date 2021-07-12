@@ -1,0 +1,40 @@
+git init
+The word init means initialize. The command sets up all the tools Git needs to begin tracking
+changes made to the project.
+
+Git Workflow
+A Git project can be thought of as having three parts:
+A Working Directory: where you’ll be doing all the work: creating, editing, deleting and
+organizing files
+A Staging Area: where you’ll list changes you make to the working directory
+A Repository: where Git permanently stores those changes as different versions of the project
+
+The git status command is used within a Git repository to its current status including the
+current commit,
+any modified files, and any new files not being tracked by Git.
+
+The git add filename command is used to add the filename file to the staging area.
+After your changes have been staged, you can use the git commit command to permanently store
+your changes.
+
+The git diff filename command will display the differences between the working directory
+and the staging area in one specific file.
+
+The git commit -m "log message here" command creates a new commit containing:
+The current contents of the staging area
+A log message describing the changes to the repository
+A commit permanently stores changes from the staging area inside the repository.
+Standard Conventions for Commit Messages:
+Must be in quotation marks
+Written in the present tense
+Should be brief (50 characters or less)
+
+The git log command shows all of the commit logs for a project. The following is displayed
+for each commit:
+A 40-character code, called a SHA, that uniquely identifies the commit. The unique SHA code allows you to
+identify a point in your program’s history that you would like to revert to.
+The commit author
+The date and time of the commit
+The commit message
+This command is particularly useful when you need to refer back to an old version of your
+project. 
