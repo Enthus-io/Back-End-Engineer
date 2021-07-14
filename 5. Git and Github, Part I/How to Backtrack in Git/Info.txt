@@ -1,0 +1,28 @@
+The commit you are currently on is known as the HEAD commit.
+The output of the git show HEAD command will display everything the git log command displays
+for the HEAD commit, plus all the file changes that were committed.
+
+The git checkout HEAD filename command rolls back all changes that have been made to
+filename since the last commit.
+You can use the git diff command to see if the rollback was successful.
+
+The git add filename_1 filename_2 command is used to add multiple files to the
+staging area at once.
+You can use git status to check if you properly added your files to the staging area.
+
+The git reset HEAD filename command will remove filename from the staging area.
+Note that this command does not discard file changes from the working directory.
+You might use this command if you’ve added a file to the staging area, but the file includes
+incorrect edits.
+You can use the git status command to make sure your file was properly removed from the
+staging area.
+
+The git reset commit_SHA command can be used to set HEAD to the commit_SHA commit. The
+commit_SHA argument is the first seven digits of a previous commit’s SHA.
+You can use git log to see a record of previous commits and their SHA values.
+
+Let’s take a moment to review the new commands:
+
+git checkout HEAD filename: Discards changes in the working directory.
+git reset HEAD filename: Unstages file changes in the staging area.
+git reset commit_SHA: Resets to a previous commit in your commit history.
